@@ -20,4 +20,10 @@ services:
     plan: free
     dockerContext: .
     dockerfilePath: ./apps/web/Dockerfile
+    envVars:
+      - key: NEXT_PUBLIC_API_HOST
+        fromService:
+          name: turborepo-backend
+          type: web
+          property: host
 version: "1"

@@ -35,6 +35,7 @@ COPY turbo.json turbo.json
 
 # ARG TURBO_TOKEN
 # ENV TURBO_TOKEN=$TURBO_TOKEN
+ENV NEXT_PUBLIC_API_HOST=$NEXT_PUBLIC_API_HOST
 
 RUN pnpm turbo build --filter=web...
 
