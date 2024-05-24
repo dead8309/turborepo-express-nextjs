@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: turborepo-backend
+    runtime: docker
+    repo: https://github.com/dead8309/turborepo-express-nextjs
+    buildFilter:
+      paths:
+        - apps/api/**
+    plan: free
+    dockerContext: .
+    dockerfilePath: ./apps/api/Dockerfile
+
+  - type: web
+    name: turborepo-frontend
+    runtime: docker
+    repo: https://github.com/dead8309/turborepo-express-nextjs
+    buildFilter:
+      paths:
+        - apps/web/**
+    plan: free
+    dockerContext: .
+    dockerfilePath: ./apps/web/Dockerfile
+version: "1"
