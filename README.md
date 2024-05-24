@@ -33,7 +33,8 @@ This repository includes a `render.yaml` file for deploying to Render using Dock
 1. Check out the Dockerfile in `apps/web` and `apps/api`
 2. Go to render dashboard
 3. Click on Blueprints and select `New Blueprint Instance`
-4. Connect the repository and configure deployment
+4. Connect the repository and configure blueprint name
+5. Click on Deploy!
 
 ### render.yaml Configuration used
 
